@@ -40,5 +40,13 @@ public class PersonaService {
     public Optional<Persona> findById(Long id) {
         return personaRepository.findById(id);
     }
+    
+    public List<Persona> findByNombre(String nombre) {
+        return personaRepository.findByNombre(nombre);
+    }
+
+    public List<Persona> findByCiudad(String ciudad) {
+        return personaRepository.findByCiudad(ciudad);
+    }
 
 }

@@ -3,10 +3,12 @@ package com.developer.agenda.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.developer.agenda.models.Contacto;
 import com.developer.agenda.models.Empresa;
 import com.developer.agenda.repositories.EmpresaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EmpresaService {
@@ -35,5 +37,9 @@ public class EmpresaService {
 	    public void deleteEmpresa(Long id) {
 	        empresaRepository.deleteById(id);
 	    }
+	    
+	    public Optional<Empresa> findById(Long id) {
+			return empresaRepository.findById(id);
+		}
 
 }
