@@ -24,12 +24,10 @@ public class PersonaService {
     }
 
     public Persona addPersona(Persona persona) {
-        // Puedes realizar validaciones antes de guardar la persona
-        return personaRepository.save(persona);
+       return personaRepository.save(persona);
     }
 
     public Persona updatePersona(Long id, Persona persona) {
-        // Puedes implementar la actualización según tus necesidades
         return personaRepository.save(persona);
     }
 
